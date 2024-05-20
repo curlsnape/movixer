@@ -14,7 +14,7 @@ import NotFound from "./components/NotFound";
 
 function App() {
   return (
-    <div className="w-screen min-h-screen flex overflow-x-hidden  bg-[#1F1E24]">
+    <div className="w-screen min-h-screen flex  bg-[#1F1E24]">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/trending" element={<Trending />} />
