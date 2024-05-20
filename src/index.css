@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Poppins';
+}
+
+::-webkit-scrollbar{
+width: 7px;
+height: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #3b3942;
+    border-radius: 50px;
+    
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #585661;
+    
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    border: 0 !important;
+    background: #27272a;
+    background-image: none;
+    flex: 1;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 0 0.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.25s all ease;
+    /* font-family: "Open Sans",sans-serif; */
+}
+
+select::-ms-expand{
+    display: none;
+}
+.select{
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    border-radius: 0.25em;
+    line-height: 3;
+    overflow: hidden;
+    background: #27272a;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #4a4a50;
+    cursor: pointer;
+    pointer-events: none;
+    transition: 0.25s all ease;
+}
+.select:hover::after{
+    color: #6556cd;
+   
+}
