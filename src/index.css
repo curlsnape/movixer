@@ -32,13 +32,13 @@ select{
     background-image: none;
     flex: 1;
     color: #fff;
-    font-weight: 500;
-    font-size: 1em;
+    font-weight: 600;
+    font-size: 0.7em;
     padding: 0 0.5em;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.25s all ease;
-    /* font-family: "Open Sans",sans-serif; */
+    font-family: "inter";
 }
 
 select::-ms-expand{
@@ -47,8 +47,8 @@ select::-ms-expand{
 .select{
     position: relative;
     display: flex;
-    width: 20em;
-    height: 3em;
+    width: 12em;
+    height: 2.4em;
     border-radius: 0.25em;
     line-height: 3;
     overflow: hidden;
@@ -59,7 +59,8 @@ select::-ms-expand{
     position: absolute;
     top: 0;
     right: 0;
-    padding: 0 1em;
+    
+    padding:  0em 0.8em ;
     background: #4a4a50;
     cursor: pointer;
     pointer-events: none;

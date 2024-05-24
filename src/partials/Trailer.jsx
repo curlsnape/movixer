@@ -15,7 +15,7 @@ function Trailer() {
       <Link>
         <i
           onClick={() => navigate(-1)}
-          className="ri-close-fill mr-5 text-3xl text-white absolute top-[5%] right-[8%] font-medium hover:text-[#6556CD]  "
+          className="ri-close-fill mr-5 text-sm text-white absolute top-[5%] right-[8%] font-medium hover:text-[#6556CD]  "
         ></i>
       </Link>
  {ytvideo? <ReactPlayer controls

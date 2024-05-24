@@ -27,7 +27,7 @@ function PeopleDetails() {
   }, [id]);
   return info ? (
     <div className="w-screen h-screen bg-[#1F1E24]  ">
-      <nav className="text-xl h-[8vh] py-10 px-32 text-zinc-400">
+      <nav className="text-xs h-[8vh] py-10 px-32 text-zinc-400">
         <Link>
           <i
             onClick={() => navigate(-1)}
@@ -43,7 +43,7 @@ function PeopleDetails() {
             alt=""
           />
           <hr className="border-none bg-zinc-500 mt-5 h-[1.5px]" />
-          <div className="text-2xl text-white mt-3 flex gap-5 justify-center">
+          <div className="text-sm text-white mt-3 flex gap-5 justify-center">
             <a
               className="hover:text-sky-300"
               target="_black"
@@ -70,76 +70,76 @@ function PeopleDetails() {
               <i className="ri-earth-fill"></i>
             </a>
           </div>
-          <h1 className="text-2xl font-medium my-5 text-zinc-400">
+          <h1 className="text-sm font-medium my-5 text-zinc-400">
             Person's Info
           </h1>
-          <h1 className="text-xl text-zinc-500  font-semibold">Known for</h1>
-          <h1 className="text-lg font-medium text-zinc-500 ">
+          <h1 className="text-xs text-zinc-500  font-semibold">Known for</h1>
+          <h1 className="text-xs font-medium text-zinc-500 ">
             {info.details.known_for_department}
           </h1>
-          <h1 className="text-xl text-zinc-500  font-semibold mt-3">
+          <h1 className="text-xs text-zinc-500  font-semibold mt-3">
             Birthdate
           </h1>
-          <h1 className="text-lg font-medium text-zinc-500 ">
+          <h1 className="text-xs font-medium text-zinc-500 ">
             {info.details.birthday}
           </h1>
           {info.details.deathday === null ? (
             ""
           ) : (
             <>
-              <h1 className="text-xl text-zinc-500  font-semibold mt-3">
+              <h1 className="text-xs text-zinc-500  font-semibold mt-3">
                 Death Date
               </h1>
-              <h1 className="text-lg font-medium text-zinc-500 ">
+              <h1 className="text-xs font-medium text-zinc-500 ">
                 {info.details.deathday}
               </h1>
             </>
           )}
-          <h1 className="text-xl text-zinc-500  font-semibold mt-3">
+          <h1 className="text-xs text-zinc-500  font-semibold mt-3">
             Birthplace
           </h1>
-          <h1 className="text-base font-medium text-zinc-500 ">
+          <h1 className="text-xs font-medium text-zinc-500 ">
             {info.details.place_of_birth && info.details.place_of_birth}
           </h1>
-          <h1 className="text-xl text-zinc-500  font-semibold mt-3">Gender</h1>
-          <h1 className="text-lg font-medium text-zinc-500 ">
+          <h1 className="text-xs text-zinc-500  font-semibold mt-3">Gender</h1>
+          <h1 className="text-xs font-medium text-zinc-500 ">
             {info.details.gender === 2 ? "Male" : "Female"}
           </h1>
         </div>
         <div className="w-[80%] flex flex-col">
-          <h1 className="text-5xl text-zinc-400 font-semibold">
+          <h1 className="text-2xl text-zinc-400 font-semibold">
             {info.details.name}
           </h1>
-          <h1 className="text-2xl font-semibold mt-5 text-zinc-300">
+          <h1 className="text-sm font-semibold mt-5 text-zinc-300">
             Biography
           </h1>
-          <h1 className="text-base text-zinc-500 mt-2 font-medium">
+          <h1 className="text-xs text-zinc-500 mt-2 font-medium">
             {info.details.biography}
           </h1>
 
-          <h1 className="text-zinc-400 mt-5 mb-3 font-semibold text-xl">
+          <h1 className="text-zinc-400 mt-5 mb-3 font-semibold text-sm">
             Starred with
           </h1>
           <HorizontalCards data={info.combined_credits.cast} />
           <div className="flex mt-5 items-center justify-between py-3">
-            <h1 className="text-xl text-zinc-300">Works</h1>
+            <h1 className="text-xs text-zinc-300">Works</h1>
             <DropDown
               title="category"
               options={["movie", "tv"]}
               func={(e) => setcategory(e.target.value)}
             />
           </div>
-          <div className="w-full list-disc text-zinc-400 text-lg h-[50vh] shadow-xl p-3 shadow-[rgba(0,0,0,0.5)] overflow-y-auto overflow-x-hidden">
+          <div className="w-full list-disc text-zinc-400 text-xs h-[50vh] shadow-xl p-3 shadow-[rgba(0,0,0,0.5)] overflow-y-auto overflow-x-hidden">
             
               {info[category + "_credits"].cast.map((k, i) => (
                 <li className="p-5">
                 <Link to={`/${category}/details/${k.id}`} className="">
                   <span className="inline-block">
-                    <h1 className="font-bold mt-1 text-xl w-full ">
+                    <h1 className="font-bold mt-1 text-xs w-full ">
                       {k.title || k.original_name || k.original_title || k.name}
                     </h1>
                   </span>
-                  <span className="block text-base font-medium ml-7">{k.character && `character : ${k.character}`} </span>
+                  <span className="block text-xs font-medium ml-7">{k.character && `character : ${k.character}`} </span>
                 </Link>
                 </li>
               ))}

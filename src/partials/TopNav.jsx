@@ -20,18 +20,18 @@ function TopNav() {
 
   return (
     <div className="h-[8vh] w-full z-[100] flex relative items-center justify-start pl-[15%]">
-      <i className="ri-search-line text-3xl text-zinc-400"></i>
+      <i className="ri-search-line text-lg text-zinc-400"></i>
       <input
         onChange={(e) => setquery(e.target.value)}
         value={query}
-        className="outline-none  mx-10 text-xl text-zinc-300 font-medium w-[50%] border-none bg-transparent  "
+        className="outline-none  mx-10 text-sm text-zinc-300 font-medium w-[50%] border-none bg-transparent  "
         type="text"
         placeholder="Search..."
       />
       {query.length > 0 && (
         <i
           onClick={() => setquery("")}
-          className="ri-close-line text-4xl text-red-600"
+          className="ri-close-line text-xl text-red-600"
         ></i>
       )}
 
@@ -46,7 +46,7 @@ function TopNav() {
                   ` https://image.tmdb.org/t/p/original/${s.backdrop_path || s.profile_path}`:noimage}
                 alt=""
               />
-              <span className="text-xl font-black text-gray-600 hover:text-black font-[gilroy] ">
+              <span className="text-xs font-black text-gray-600 hover:text-black font-[gilroy] ">
                 {s.title || s.original_name || s.original_title || s.name}
               </span>
             </Link>

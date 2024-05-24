@@ -45,7 +45,7 @@ function Home() {
         <TopNav />
         <Header data={wallpaper} />
         <div className=" flex justify-between p-5  ">
-          <h1 className="text-zinc-300 font-semibold text-3xl mb-5">
+          <h1 className="text-zinc-300 font-semibold text-xl mb-5">
             Trending Now 
             <i
               style={{

@@ -44,13 +44,13 @@ function Trending() {
   }, [category, duration]);
   return trending.length > 0 ? (
     <div className=" w-screen  h-screen ">
-      <div className="px-[3%] w-full h-[10vh] justify-between flex items-center">
-        <h1 className="font-semibold w-[20%] text-zinc-400  text-2xl">
+      <div className="px-[3%] w-full h-[10vh] mt-3 justify-between flex items-center">
+        <h1 className="font-semibold w-[20%] text-zinc-400  text-xl">
           <i
             onClick={() => navigate(-1)}
             className="ri-arrow-left-line mr-5 font-medium hover:text-[#6556CD]  "
           ></i>
-          Trending <small className="font-semibold text-sm text-zinc-600">({category.toUpperCase()})</small>
+          Trending <small className="font-semibold text-xs text-zinc-600">({category.toUpperCase()})</small>
         </h1>
         <div className="w-[80%] flex items-center  ">
           <TopNav />

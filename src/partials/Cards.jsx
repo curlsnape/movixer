@@ -17,12 +17,12 @@ function Cards({ data ,title}) {
             }`:noimage}
             alt=""
           />
-          <h1 className="font-semibold text-2xl mt-2 text-zinc-300 text-center">
+          <h1 className="font-semibold text-lg mt-2 text-zinc-300 text-center">
             {" "}
             {c.title || c.original_name || c.original_title || c.name}
           </h1>{" "}
           {c.vote_average && (
-            <div className="w-[6vh] h-[6vh] absolute right-[-8%] bottom-[28%] bg-yellow-600 text-xl flex justify-center items-center text-white rounded-full font-semibold">
+            <div className="w-[6vh] h-[6vh] absolute right-[-8%] bottom-[28%] bg-yellow-600 text-xs flex justify-center items-center text-white rounded-full font-semibold">
               {(c.vote_average * 10).toFixed()}
               <sup>%</sup>
             </div>

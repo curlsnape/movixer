@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import noimage from '../../public/noimage.webp'
+import noimage from "../../public/noimage.webp";
 import {
   Link,
   Outlet,
@@ -31,9 +31,9 @@ function TvDetails() {
         backgroundPosition: `top:40%`,
         backgroundSize: `cover`,
       }}
-      className="w-screen min-h-[182vh] relative px-[10%]"
+      className="w-screen min-h-[195vh] relative px-[10%]"
     >
-      <nav className="text-xl flex gap-8 h-[8vh] items-center text-zinc-400">
+      <nav className="text-xs flex gap-8 h-[8vh] items-center text-zinc-400">
         <Link>
           <i
             onClick={() => navigate(-1)}
@@ -49,7 +49,7 @@ function TvDetails() {
           <i className="ri-earth-fill"></i>
         </a>
         <a href={`https://www.imdb.com/title/${info.external_ids.imdb_id}`}>
-          <div className="font-black tracking-tight text-black flex justify-center items-center h-8 w-16 rounded-md bg-yellow-400">
+          <div className="font-black text-xs tracking-tight text-black flex justify-center items-center h-6 w-14 rounded-md bg-yellow-400">
             IMDb
           </div>
         </a>
@@ -63,8 +63,8 @@ function TvDetails() {
           }`}
           alt=""
         />
-        <div className="ml-[7%] mt-[2%]">
-          <h1 className=" text-white font-semibold text-4xl">
+        <div className="ml-[7%] mt-[1.5%]">
+          <h1 className=" text-white font-semibold text-2xl">
             {info.details.title ||
               info.details.original_name ||
               info.details.original_title ||
@@ -74,30 +74,30 @@ function TvDetails() {
             </small>
           </h1>
 
-          <div className="flex gap-5 font-medium mt-3   text-white text-lg items-center">
+          <div className="flex gap-5 font-medium mt-3   text-white text-xs items-center">
             {info.details.vote_average && (
-              <div className="w-[6vh] h-[6vh]  bg-yellow-500 text-xl flex justify-center items-center text-white rounded-full font-semibold">
+              <div className="w-[6vh] h-[6vh]  bg-yellow-500 text-xs flex justify-center items-center text-white rounded-full font-semibold">
                 {(info.details.vote_average * 10).toFixed()}
                 <sup>%</sup>
               </div>
             )}{" "}
-            <h1>User Score</h1>
-            <h1>{info.details.genres.map((j) => j.name)}</h1>
-            <h1>{info.details.first_air_date}</h1>
+            <h1 className="text-xs">User Score</h1>
+            <h1 className="text-xs">{info.details.genres.map((j) => j.name)}</h1>
+            <h1 className="text-xs">{info.details.first_air_date}</h1>
           </div>
-          <h1 className="text-xl mt-5 font-medium text-zinc-200 ">
-            <span className="text-xl font-semibold">Episodes : </span>{" "}
+          <h1 className="text-xs mt-5 font-medium text-zinc-200 ">
+            <span className="text-xs font-semibold">Episodes : </span>{" "}
             {info.details.number_of_episodes}
           </h1>
-          <h1 className="text-xl mt-1 font-medium text-zinc-200 ">
-            <span className="text-xl font-semibold">Seasons : </span>{" "}
+          <h1 className="text-xs mt-1 font-medium text-zinc-200 ">
+            <span className="text-xs font-semibold">Seasons : </span>{" "}
             {info.details.number_of_seasons}
           </h1>
-          <h1 className="text-xl mt-1 mb-2 font-medium text-white">
-            Status :<span className=" ml-2  ">{info.details.status}</span>
+          <h1 className="text-xs mt-1 mb-2 font-medium text-white">
+            Status :<span className=" ml-2 text-xs  ">{info.details.status}</span>
           </h1>
-          <h1 className="text-white font-semibold text-xl">Overview</h1>
-          <h1 className="text-white font-medium mb-3 mt-2">
+          <h1 className="text-white font-semibold text-sm">Overview</h1>
+          <h1 className="text-white text-xs font-medium mb-3 mt-2">
             {info.details.overview}
           </h1>
           <Link
@@ -105,7 +105,7 @@ function TvDetails() {
             style={{
               background: `linear-gradient(rgba(25,2,255,0.2),rgba(0,150,200,0.5),rgba(20,200,255,.8))`,
             }}
-            className=" text-white px-4 py-2  text-lg mt-2 font-medium shadow-md rounded"
+            className=" text-white px-4 py-2  text-xs mt-2 font-medium shadow-md rounded"
           >
             Watch Trailer
           </Link>
@@ -115,9 +115,7 @@ function TvDetails() {
       <div className="w-[80%] mb-[3%]">
         <div className=" ml-[5%] mt-5 flex items-center">
           {info.watchProviders && info.watchProviders.flatrate && (
-            <h1 className="text-white font-medium text-lg">
-              Flatrate Links : 
-            </h1>
+            <h1 className="text-white font-medium text-xs">Flatrate Links :</h1>
           )}
           {info.watchProviders &&
             info.watchProviders.flatrate &&
@@ -131,7 +129,7 @@ function TvDetails() {
         </div>
         <div className=" ml-[5%] mt-5 flex items-center gap-5">
           {info.watchProviders && info.watchProviders.rent && (
-            <h1 className="text-white font-medium text-lg">Rent Links : </h1>
+            <h1 className="text-white font-medium text-xs">Rent Links : </h1>
           )}
           {info.watchProviders &&
             info.watchProviders.rent &&
@@ -145,7 +143,7 @@ function TvDetails() {
         </div>
         <div className=" ml-[5%] mt-5 flex gap-5">
           {info.watchProviders && info.watchProviders.buy && (
-            <h1 className="text-white font-medium text-lg">Buy Links :</h1>
+            <h1 className="text-white font-medium text-xs">Buy Links :</h1>
           )}
 
           {info.watchProviders &&
@@ -159,20 +157,19 @@ function TvDetails() {
             ))}
         </div>
       </div>
-      
-      <h1 className=" text-3xl font-semibold text-zinc-300 ml-[4%] mb-5">
+
+      <h1 className=" text-xl font-semibold text-zinc-300 ml-[4%] mb-5">
         Recommendations
       </h1>
 
-      
       <HorizontalCards
         data={
           info.recommendations.length > 0 ? info.recommendations : info.similar
         }
       />
-      <hr  className="border-none bg-zinc-500 mt-2 h-[1.5px]"/>
+      <hr className="border-none bg-zinc-500 mt-2 h-[1.5px]" />
       <div className="w-full h-[2%]"></div>
-      <h1 className=" text-3xl font-semibold text-zinc-300 mb-3 ml-[4%] ">
+      <h1 className=" text-xl font-semibold text-zinc-300 mb-3 ml-[4%] ">
         Seasons
       </h1>
       <div className="w-full  px-5  flex gap-5 overflow-y-hidden">
@@ -180,21 +177,22 @@ function TvDetails() {
           <div className="min-w-[16%]">
             <img
               className="h-[37vh] w-full rounded-sm object-cover object-center shadow-[8px_17px_38px_2px_rgba(0,0,0,0.5)]"
-              src={s.poster_path? `https://image.tmdb.org/t/p/original/${
-                s.poster_path 
-              }`:noimage}
+              src={
+                s.poster_path
+                  ? `https://image.tmdb.org/t/p/original/${s.poster_path}`
+                  : noimage
+              }
               alt=""
             />
-            <h1 className="font-semibold text-2xl mt-2 mb-3 text-zinc-300 text-center">
+            <h1 className="font-semibold text-lg mt-2 mb-3 text-zinc-300 text-center">
               {s.name}
             </h1>
           </div>
         ))}
       </div>
-      
+
       <Outlet />
     </div>
-    
   ) : (
     <Loading />
   );
