@@ -79,7 +79,7 @@ function MovieDetails() {
             <h1 className="text-lg">{info.details.release_date}</h1>
             <h1 className="text-lg">{info.details.runtime} mins</h1>{" "}
           </div>
-          <h1 className="text-base mt-5 font-medium text-zinc-200 italic">
+          <h1 className="text-lg mt-5 font-medium text-zinc-200 italic">
             {info.details.tagline}
           </h1>
           <h1 className="text-lg mt-2 mb-1 font-medium text-white">
@@ -87,7 +87,7 @@ function MovieDetails() {
           </h1>
           <h1 className="text-white font-medium text-2xl">Overview</h1>
           <h1 className="text-white text-sm font-medium mb-5 mt-2">
-            {info.details.overview}
+            {info.details.overview.slice(0, 80)}
           </h1>
           <Link
             to={`${pathname}/trailer`}

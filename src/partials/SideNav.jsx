@@ -8,8 +8,8 @@ function SideNav() {
         <i className="ri-tv-fill text-[#6556CD] mr-2"></i>
         <span className="font-semibold">Movixer.</span>
       </h1>
-      <nav className="flex flex-col mt-2 mb-5">
-        <h1 className="font-medium text-xl text-white my-2">Explore Now</h1>
+      <nav className="flex flex-col mt-6 mb-5">
+        <h1 className="font-semibold text-xl text-white my-2">Explore Now</h1>
         <Link to='/trending' className="text-zinc-400 py-3 hover:px-5 hover:bg-purple-700 hover:text-white rounded-md font-medium duration-500 text-base">
           <i className="ri-fire-fill text-orange-400"></i> Trending
         </Link>

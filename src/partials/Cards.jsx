@@ -11,7 +11,7 @@ function Cards({ data ,title}) {
           key={i}
         >
           <img
-            className="h-[35vh] w-full object-cover shadow-[8px_17px_38px_2px_rgba(0,0,0,0.5)]"
+            className="h-[35vh] w-full object-cover object-top shadow-[8px_17px_38px_2px_rgba(0,0,0,0.5)]"
             src={ c.backdrop_path || c.poster_path || c.profile_path ?`https://image.tmdb.org/t/p/original/${
               c.backdrop_path || c.poster_path || c.profile_path
             }`:noimage}

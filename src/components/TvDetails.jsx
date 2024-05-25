@@ -74,30 +74,30 @@ function TvDetails() {
             </small>
           </h1>
 
-          <div className="flex gap-5 font-medium mt-3   text-white text-xs items-center">
+          <div className="flex gap-5 font-medium mt-3   text-white text-sm items-center">
             {info.details.vote_average && (
               <div className="w-[6vh] h-[6vh]  bg-yellow-500 text-sm flex justify-center items-center text-white rounded-full font-semibold">
                 {(info.details.vote_average * 10).toFixed()}
                 <sup>%</sup>
               </div>
             )}{" "}
-            <h1 className="text-sm">User Score</h1>
-            <h1 className="text-sm">{info.details.genres.map((j) => j.name)}</h1>
-            <h1 className="text-sm">{info.details.first_air_date}</h1>
+            <h1 className="text-base">User Score</h1>
+            <h1 className="text-base">{info.details.genres.map((j) => j.name)}</h1>
+            <h1 className="text-base">{info.details.first_air_date}</h1>
           </div>
-          <h1 className="text-sm mt-5 font-medium text-zinc-200 ">
-            <span className="text-sm font-semibold">Episodes : </span>{" "}
+          <h1 className="text-base mt-5 font-medium text-zinc-200 ">
+            <span className="text-base font-semibold">Episodes : </span>{" "}
             {info.details.number_of_episodes}
           </h1>
-          <h1 className="text-sm mt-1 font-medium text-zinc-200 ">
-            <span className="text-sm font-semibold">Seasons : </span>{" "}
+          <h1 className="text-base mt-1 font-medium text-zinc-200 ">
+            <span className="text-base font-semibold">Seasons : </span>{" "}
             {info.details.number_of_seasons}
           </h1>
-          <h1 className="text-sm mt-1 mb-2 font-medium text-white">
-            Status :<span className=" ml-2 text-sm  ">{info.details.status}</span>
+          <h1 className="text-base mt-1 mb-2 font-medium text-white">
+            Status :<span className=" ml-2 text-base">{info.details.status}</span>
           </h1>
-          <h1 className="text-white font-semibold text-base">Overview</h1>
-          <h1 className="text-white text-sm font-medium mb-3 mt-2">
+          <h1 className="text-white font-semibold text-xl">Overview</h1>
+          <h1 className="text-white text-sm font-medium mb-5 mt-2">
             {info.details.overview}
           </h1>
           <Link
