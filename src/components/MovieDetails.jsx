@@ -87,7 +87,7 @@ function MovieDetails() {
           </h1>
           <h1 className="text-white font-medium text-2xl">Overview</h1>
           <h1 className="text-white text-sm font-medium mb-5 mt-2">
-            {info.details.overview.slice(0, 80)}
+            {info.details.overview.slice(0, 250)}
           </h1>
           <Link
             to={`${pathname}/trailer`}
