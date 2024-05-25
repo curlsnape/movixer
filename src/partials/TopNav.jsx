@@ -31,7 +31,7 @@ function TopNav() {
       {query.length > 0 && (
         <i
           onClick={() => setquery("")}
-          className="ri-close-line text-xl text-red-600"
+          className="ri-close-line text-2xl text-red-600"
         ></i>
       )}
 
@@ -46,7 +46,7 @@ function TopNav() {
                   ` https://image.tmdb.org/t/p/original/${s.backdrop_path || s.profile_path}`:noimage}
                 alt=""
               />
-              <span className="text-xs font-black text-gray-600 hover:text-black font-[gilroy] ">
+              <span className="text-sm font-black text-gray-600 hover:text-black font-[gilroy] ">
                 {s.title || s.original_name || s.original_title || s.name}
               </span>
             </Link>

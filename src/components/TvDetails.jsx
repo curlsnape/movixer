@@ -33,7 +33,7 @@ function TvDetails() {
       }}
       className="w-screen min-h-[195vh] relative px-[10%]"
     >
-      <nav className="text-xs flex gap-8 h-[8vh] items-center text-zinc-400">
+      <nav className="text-lg flex gap-8 h-[8vh] items-center text-zinc-400">
         <Link>
           <i
             onClick={() => navigate(-1)}
@@ -49,7 +49,7 @@ function TvDetails() {
           <i className="ri-earth-fill"></i>
         </a>
         <a href={`https://www.imdb.com/title/${info.external_ids.imdb_id}`}>
-          <div className="font-black text-xs tracking-tight text-black flex justify-center items-center h-6 w-14 rounded-md bg-yellow-400">
+          <div className="font-black text-sm tracking-tight text-black flex justify-center items-center h-6 w-14 rounded-md bg-yellow-400">
             IMDb
           </div>
         </a>
@@ -76,28 +76,28 @@ function TvDetails() {
 
           <div className="flex gap-5 font-medium mt-3   text-white text-xs items-center">
             {info.details.vote_average && (
-              <div className="w-[6vh] h-[6vh]  bg-yellow-500 text-xs flex justify-center items-center text-white rounded-full font-semibold">
+              <div className="w-[6vh] h-[6vh]  bg-yellow-500 text-sm flex justify-center items-center text-white rounded-full font-semibold">
                 {(info.details.vote_average * 10).toFixed()}
                 <sup>%</sup>
               </div>
             )}{" "}
-            <h1 className="text-xs">User Score</h1>
-            <h1 className="text-xs">{info.details.genres.map((j) => j.name)}</h1>
-            <h1 className="text-xs">{info.details.first_air_date}</h1>
+            <h1 className="text-sm">User Score</h1>
+            <h1 className="text-sm">{info.details.genres.map((j) => j.name)}</h1>
+            <h1 className="text-sm">{info.details.first_air_date}</h1>
           </div>
-          <h1 className="text-xs mt-5 font-medium text-zinc-200 ">
-            <span className="text-xs font-semibold">Episodes : </span>{" "}
+          <h1 className="text-sm mt-5 font-medium text-zinc-200 ">
+            <span className="text-sm font-semibold">Episodes : </span>{" "}
             {info.details.number_of_episodes}
           </h1>
-          <h1 className="text-xs mt-1 font-medium text-zinc-200 ">
-            <span className="text-xs font-semibold">Seasons : </span>{" "}
+          <h1 className="text-sm mt-1 font-medium text-zinc-200 ">
+            <span className="text-sm font-semibold">Seasons : </span>{" "}
             {info.details.number_of_seasons}
           </h1>
-          <h1 className="text-xs mt-1 mb-2 font-medium text-white">
-            Status :<span className=" ml-2 text-xs  ">{info.details.status}</span>
+          <h1 className="text-sm mt-1 mb-2 font-medium text-white">
+            Status :<span className=" ml-2 text-sm  ">{info.details.status}</span>
           </h1>
-          <h1 className="text-white font-semibold text-sm">Overview</h1>
-          <h1 className="text-white text-xs font-medium mb-3 mt-2">
+          <h1 className="text-white font-semibold text-base">Overview</h1>
+          <h1 className="text-white text-sm font-medium mb-3 mt-2">
             {info.details.overview}
           </h1>
           <Link
@@ -105,7 +105,7 @@ function TvDetails() {
             style={{
               background: `linear-gradient(rgba(25,2,255,0.2),rgba(0,150,200,0.5),rgba(20,200,255,.8))`,
             }}
-            className=" text-white px-4 py-2  text-xs mt-2 font-medium shadow-md rounded"
+            className=" text-white px-4 py-2  text-sm mt-2 font-medium shadow-md rounded"
           >
             Watch Trailer
           </Link>

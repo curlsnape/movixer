@@ -17,7 +17,7 @@ function Header({ data }) {
       <h1 className="font-bold w-[50%] text-2xl mb-3 text-white">
         {data.title || data.original_name || data.original_title || data.name}
       </h1>
-      <p className="text-white text-xs font-medium w-[70%]">
+      <p className="text-white text-sm font-medium w-[70%]">
         {data.overview.slice(0, 204)}...
         <Link to={`/${data.media_type}/details/${data.id}`} className="text-blue-400">more</Link>
       </p>

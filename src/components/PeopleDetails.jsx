@@ -27,7 +27,7 @@ function PeopleDetails() {
   }, [id]);
   return info ? (
     <div className="w-screen h-screen bg-[#1F1E24]  ">
-      <nav className="text-xs h-[8vh] py-10 px-32 text-zinc-400">
+      <nav className="text-lg h-[8vh] py-10 px-32 text-zinc-400">
         <Link>
           <i
             onClick={() => navigate(-1)}
@@ -70,14 +70,14 @@ function PeopleDetails() {
               <i className="ri-earth-fill"></i>
             </a>
           </div>
-          <h1 className="text-sm font-medium my-5 text-zinc-400">
+          <h1 className="text-lg font-medium my-5 text-zinc-400">
             Person's Info
           </h1>
-          <h1 className="text-xs text-zinc-500  font-semibold">Known for</h1>
+          <h1 className="text-sm text-zinc-500  font-semibold">Known for</h1>
           <h1 className="text-xs font-medium text-zinc-500 ">
             {info.details.known_for_department}
           </h1>
-          <h1 className="text-xs text-zinc-500  font-semibold mt-3">
+          <h1 className="text-sm text-zinc-500  font-semibold mt-3">
             Birthdate
           </h1>
           <h1 className="text-xs font-medium text-zinc-500 ">
@@ -87,7 +87,7 @@ function PeopleDetails() {
             ""
           ) : (
             <>
-              <h1 className="text-xs text-zinc-500  font-semibold mt-3">
+              <h1 className="text-sm text-zinc-500  font-semibold mt-3">
                 Death Date
               </h1>
               <h1 className="text-xs font-medium text-zinc-500 ">
@@ -95,13 +95,13 @@ function PeopleDetails() {
               </h1>
             </>
           )}
-          <h1 className="text-xs text-zinc-500  font-semibold mt-3">
+          <h1 className="text-sm text-zinc-500  font-semibold mt-3">
             Birthplace
           </h1>
           <h1 className="text-xs font-medium text-zinc-500 ">
             {info.details.place_of_birth && info.details.place_of_birth}
           </h1>
-          <h1 className="text-xs text-zinc-500  font-semibold mt-3">Gender</h1>
+          <h1 className="text-sm text-zinc-500  font-semibold mt-3">Gender</h1>
           <h1 className="text-xs font-medium text-zinc-500 ">
             {info.details.gender === 2 ? "Male" : "Female"}
           </h1>

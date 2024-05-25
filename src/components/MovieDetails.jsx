@@ -26,7 +26,7 @@ function MovieDetails() {
       }}
       className="w-screen min-h-[140vh] relative px-[10%]"
     >
-      <nav className="text-sm flex gap-8 h-[8vh] items-center text-zinc-400">
+      <nav className="text-lg flex gap-8 h-[8vh] items-center text-zinc-400">
         <Link>
           <i
             onClick={() => navigate(-1)}
@@ -69,7 +69,7 @@ function MovieDetails() {
 
           <div className="flex gap-5 font-medium mt-3   text-white text-xs items-center">
             {info.details.vote_average && (
-              <div className="w-[6vh] h-[6vh]  bg-yellow-500 text-xs flex justify-center items-center text-white rounded-full font-semibold">
+              <div className="w-[6vh] h-[6vh]  bg-yellow-500 text-sm flex justify-center items-center text-white rounded-full font-semibold">
                 {(info.details.vote_average * 10).toFixed()}
                 <sup>%</sup>
               </div>

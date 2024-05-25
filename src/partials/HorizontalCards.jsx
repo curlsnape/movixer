@@ -25,7 +25,7 @@ function HorizontalCards({ data }) {
                 card.original_title ||
                 card.name}
             </h1>
-            <p className="mt-1 text-xs font-light ">
+            <p className="mt-1 text-xs font-medium ">
               {card.overview.slice(0, 40)}...
               <Link className="text-zinc-500">more</Link>
             </p>
