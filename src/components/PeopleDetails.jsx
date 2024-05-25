@@ -35,10 +35,10 @@ function PeopleDetails() {
           ></i>
         </Link>
       </nav>
-      <div className="w-full h-[170vh] px-[15%] bg-[#1F1E24] flex gap-20">
+      <div className="w-full h-[170vh] px-[15%] bg-[#1F1E24] flex gap-10">
         <div className="w-[20%]">
           <img
-            className="object-cover w-fit  shadow-[8px_17px_38px_2px_rgba(0,0,0,0.5)] h-[35vh]  mt-[2%] "
+            className="object-cover shadow-[8px_17px_38px_2px_rgba(0,0,0,0.5)] h-[35vh] object-[center_top]  mt-[2%] "
             src={`https://image.tmdb.org/t/p/original/${info.details.profile_path}`}
             alt=""
           />
@@ -117,8 +117,8 @@ function PeopleDetails() {
             {info.details.biography}
           </h1>
 
-          <h1 className="text-zinc-400 mt-5 mb-3 font-semibold text-sm">
-            Starred with
+          <h1 className="text-zinc-400 mt-5 mb-3 font-semibold text-lg">
+            Starred in
           </h1>
           <HorizontalCards data={info.combined_credits.cast} />
           <div className="flex mt-5 items-center justify-between py-3">
@@ -129,17 +129,17 @@ function PeopleDetails() {
               func={(e) => setcategory(e.target.value)}
             />
           </div>
-          <div className="w-full list-disc text-zinc-400 text-xs h-[50vh] shadow-xl p-3 shadow-[rgba(0,0,0,0.5)] overflow-y-auto overflow-x-hidden">
+          <div className="w-full list-disc text-zinc-400 text-2xl h-[50vh] shadow-xl p-3 shadow-[rgba(0,0,0,0.5)] overflow-y-auto overflow-x-hidden">
             
               {info[category + "_credits"].cast.map((k, i) => (
                 <li className="p-5">
                 <Link to={`/${category}/details/${k.id}`} className="">
                   <span className="inline-block">
-                    <h1 className="font-bold mt-1 text-xs w-full ">
+                    <h1 className="font-bold mt-1 text-lg w-full ">
                       {k.title || k.original_name || k.original_title || k.name}
                     </h1>
                   </span>
-                  <span className="block text-xs font-medium ml-7">{k.character && `character : ${k.character}`} </span>
+                  <span className="block text-base font-medium ml-8">{k.character && `character : ${k.character}`} </span>
                 </Link>
                 </li>
               ))}
